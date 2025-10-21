@@ -10,7 +10,7 @@ function App() {
     setLoading(true)
     try {
       // ✅ Directly target backend port
-      const res = await fetch('https://ip-dibia.int.sebastine.ng/api/visit-report')
+      const res = await fetch(`${window.location.origin}/api/visit-report`)
       if (!res.ok) throw new Error('Failed to fetch report')
       const data = await res.json()
       setReport(data)
